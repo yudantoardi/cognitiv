@@ -104,7 +104,7 @@ form.src{
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 0;
+    z-index: -1;
     pointer-events: none;
 }
 .page-background img{
@@ -686,6 +686,17 @@ form.src{
     color: #6d6d6d;
     font-family: var(--audio);
     margin-bottom: 0;
+    padding-bottom: 10px;
+    position: relative;
+}
+.cooh-article h1::before{
+    content: "";
+    width: 80%;
+    height: 4px;
+    background: #c4c4c4;
+    position: absolute;
+    top: 100%;
+    left: 0;
 }
 .cooh-article h1 span{
     color: var(--dark-blue);
@@ -776,6 +787,120 @@ form.src{
     border-radius: 0 100px 100px 0;
     -moz-border-radius: 0 100px 100px 0;
     -webkit-border-radius: 0 100px 100px 0;
+}
+
+.led-title{
+    width: 100%;
+    float: left;
+    text-align: right;
+    position: relative;
+}
+.led-title h1{
+    font-size: 42px;
+    font-family: var(--audio);
+    color: var(--dark-blue);
+    margin-top: 0;
+}
+.led-title::after{
+    content: "";
+    width: 143px;
+    height: 45px;
+    position: absolute;
+    top: 2px;
+    left: calc(100% + 20px);
+    background: url(../images/led-top-right.png) no-repeat center;
+    background-size: contain;
+}
+
+.led-detail .led-img{
+    width: 60%;
+    float: left;
+    padding: 10px;
+    border: 3px solid var(--dark-blue);
+    position: relative;
+    margin: 0;
+}
+.led-detail .led-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.led-detail .led-img::before{
+    content: "";
+    width: 200px;
+    height: 9px;
+    position: absolute;
+    left: 50px;
+    top: -6px;
+    background: var(--dark-blue);
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+.led-detail .right-ct{
+    width: 40%;
+    float: left;
+    padding: 0 0 0 40px;
+}
+.led-article p,
+.led-article td,
+.led-article li{
+    color: var(--dark-blue);
+    font-size: 16px;
+    line-height: 150%;
+}
+.led-article h4{
+    font-size: 18px;
+    color: var(--dark-blue);
+    margin-bottom: 0;
+}
+.led-article table td{
+    vertical-align: top;
+}
+.led-article td:first-child{
+    width: 100px;
+}
+.led-article ul{
+    width: 100%;
+    float: left;
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 30px;
+}
+.led-article ul li{
+    margin-bottom: 5px;
+}
+
+.led-article .maps{
+    width: 100%;
+    float: left;
+    height: 420px;
+    padding: 10px;
+    border: 3px solid var(--dark-blue);
+    position: relative;
+}
+.led-article .maps::before,
+.led-article .maps::after{
+    content: "";
+    width: 110px;
+    height: 9px;
+    position: absolute;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background: var(--dark-blue);
+}
+.led-article .maps::before{
+    top: -6px;
+    left: 50px;
+}
+.led-article .maps::after{
+    bottom: -6px;
+    right: 50px;
+}
+.led-article .maps iframe{
+    width: 100%;
+    height: 100%;
 }
 
 @media only screen and (max-width: 1440px){
@@ -876,7 +1001,7 @@ form.src{
     .cooh-article p,
     .cooh-article td,
     .cooh-article li{
-        font-size: 16px;
+        font-size: 15px;
     }
     .cooh-image figure{
         height: 240px;
@@ -888,6 +1013,34 @@ form.src{
     .cooh-detail .bt-back img{
         width: 18px;
         height: 18px;
+    }
+
+    .led-title h1{
+        font-size: 32px;
+    }
+
+    .led-detail .led-img{
+        height: 360px;
+        width: 55%;
+    }
+    .led-detail .right-ct{
+        width: 45%;
+    }
+    .led-article p, 
+    .led-article td, 
+    .led-article li{
+        font-size: 14px;
+    }
+
+    .led-article h4{
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    .led-article p{
+        margin: 5px 0;
+    }
+    .led-article .maps{
+        height: 180px;
     }
 }
 
