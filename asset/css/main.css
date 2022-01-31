@@ -72,7 +72,8 @@ p{
     color: #000;
     transition: var(--anim);
 }
-.c-menu .item a:hover{
+.c-menu .item a:hover,
+.c-menu .item.active a{
     color: var(--blue);
 }
 .c-menu .item::after{
