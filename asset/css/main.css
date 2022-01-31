@@ -904,7 +904,7 @@ form.src{
     height: 100%;
 }
 
-@media only screen and (max-width: 1440px){
+@media only screen and (max-width: 1600px){
     .home-title h4{
         font-size: 32px;
         margin-top: 30px;
