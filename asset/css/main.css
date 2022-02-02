@@ -1307,10 +1307,11 @@ form.src{
 
 }
 
-@media only screen and (orientation:landscape){
+/*@media only screen and (orientation:landscape){
     body {
+      width: 100vh;
       height: 100vw;
       transform: rotate(90deg);
     }
-}
+}*/
 
