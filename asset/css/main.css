@@ -1307,7 +1307,7 @@ form.src{
 
 }
 
-@media only screen and (orientation:landscape){
+/*@media only screen and (orientation:landscape){
 
     .master{
         overflow-y: auto;
@@ -1345,3 +1345,4 @@ form.src{
     }
 }
 
+*/
