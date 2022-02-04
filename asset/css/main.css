@@ -91,8 +91,72 @@ p{
 .c-menu .item:last-child:after{
     display: none;
 }
-form.src{
-    display: none;
+.src-overlay{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    background: rgba(255,255,255,0.9);
+    transition: var(--anim);
+    -moz-transition: var(--anim);
+    -webkit-transition: var(--anim);
+    opacity: 0;
+    pointer-events: none;
+}
+.src-overlay .src{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    width: calc(100% - 40px);
+    max-width: 600px;
+    height: 80px;
+    transition: var(--anim);
+    -moz-transition: var(--anim);
+    -webkit-transition: var(--anim);
+}
+.src-overlay.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+.src-overlay.show .src{
+    top: 50%;
+}
+.src-overlay .src input{
+    width: 100%;
+    height: 80px;
+    font-size: 24px;
+    border: none;
+    border-bottom: 1px solid var(--blue);
+    padding: 0 30px;
+    transition: var(--anim);
+    -moz-transition: var(--anim);
+    -webkit-transition: var(--anim);
+    box-shadow: 0 4px 12px rgba(0,0,0,0);
+    -moz-box-shadow: 0 4px 12px rgba(0,0,0,0);
+    -webkit-box-shadow: 0 4px 12px rgba(0,0,0,0);
+    background: #f4f4f4;
+}
+.src-overlay .src input:focus{
+    outline: none;
+    background: #fff;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+.src-overlay .src button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    padding: 25px;
+    background: none;
+    border: none;
 }
 .c-menu .item a.bt-src{
     height: 30px;
@@ -122,6 +186,12 @@ form.src{
     padding-left: 100px;
     padding-right: 100px;
     z-index: 2;
+    transition: var(--anim);
+    -moz-transition: var(--anim);
+    -webkit-transition: var(--anim);
+}
+.master.blur .main-content{
+    filter: blur(5px);
 }
 .home-ct{
     width: 50%;
@@ -1125,7 +1195,7 @@ form.src{
         top: 0;
         background: #fff;
         left: 0;
-        padding-top: 100px;
+        padding-top: 200px;
         height: 100vh;
         opacity: 0;
         pointer-events: none;
@@ -1138,17 +1208,46 @@ form.src{
         pointer-events: auto;
     }
     .c-menu .item:last-child{
+        position: absolute;
+        top: 100px;
+        left: 0;
+    }
+    .c-menu .item:last-child a.bt-src{
         display: none;
+    }
+    .c-menu .item:last-child .src-overlay{
+        opacity: 1;
+        width: 100%;
+        height: 60px;
+        position: relative;
+        pointer-events: auto;
+    }
+    .c-menu .item:last-child .src-overlay .src{
+        width: 100%;
+        height: 60px;
+    }
+    .c-menu .item:last-child .src-overlay .src input{
+        font-size: 16px;
+        padding: 0 20px;
+        height: 60px;
+    }
+    .c-menu .item:last-child .src-overlay .src button{
+        width: 60px;
+        height: 60px;
+        padding: 20px;
     }
     .c-menu .item{
         width: 100%;
-        text-align: center;
+        text-align: left;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     .c-menu .item::after{
         display: none;
     }
     .c-menu .item a{
-        padding: 25px 0;
+        padding: 15px 0;
+        height: auto;
     }
 
     .ptb-40{
