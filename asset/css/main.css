@@ -1406,42 +1406,37 @@ p{
 
 }
 
-/*@media only screen and (orientation:landscape){
-
-    .master{
-        overflow-y: auto;
-        height: auto;
-        padding-top: 90px;
-    }
-    .main-menu{
-        position: fixed;
-        top: 0;
-        left: 0;
-        background: #fff;
-    }
-
-    .logo{
-        width: 25%;
-    }
-
-    .home-ct{
-        width: 50%;
-    }
-    .home-img{
-        width: 50%;
-        position: fixed;
-        right: 0;
-        bottom: 0;
-    }
-    .c-menu{
-        padding-left: 20px;
-        padding-right: 100px;
-    }
-    .c-menu .item{
-        width: 40%;
-        float: left;
-        text-align: left;
-    }
+/*ONE PAGE STYLING*/
+body{
+    overflow-x: hidden;
+}
+section{
+    width: 100%;
+    float: left;
+    position: relative;
+    height: 100vh;
+    padding: 150px 0 50px;
 }
 
-*/
+.master.one-page{
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: auto;
+}
+.master.one-page .footer{
+    position: absolute;
+    bottom: -20px;
+}
+.master.one-page .main-menu{
+    position: fixed;
+    z-index: 99;
+}
+.master.one-page .main-menu.sticky{
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+.master.one-page .c-menu{
+    margin-top: 10px;
+}
+
+

@@ -9,17 +9,28 @@ $(document).ready(function(){
     });
 
     var supportsTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
-        $('.bt-src').on(supportsTouch ? 'touchend' : 'click', function (event) {
-            event.stopPropagation();
-            $('.src-overlay').addClass("show");
-            $(".master").addClass("blur");
-        });
-        $('.src').on(supportsTouch ? 'touchend' : 'click', function (ev) {
-            ev.stopPropagation();
-        });
+    $('.bt-src').on(supportsTouch ? 'touchend' : 'click', function (event) {
+        event.stopPropagation();
+        $('.src-overlay').addClass("show");
+        $(".master").addClass("blur");
+    });
+    $('.src').on(supportsTouch ? 'touchend' : 'click', function (ev) {
+        ev.stopPropagation();
+    });
 
-        $(document).on(supportsTouch ? 'touchend' : 'click', function (event) {
-            $('.src-overlay').removeClass("show");
-            $(".master").removeClass("blur");
-        });
+    $(document).on(supportsTouch ? 'touchend' : 'click', function (event) {
+        $('.src-overlay').removeClass("show");
+        $(".master").removeClass("blur");
+    });
+
+    var yourNavigation = $(".main-menu");
+    stickyDiv = "sticky";
+
+    $(window).scroll(function() {
+        if( $(this).scrollTop() > 300 ) {
+            yourNavigation.addClass(stickyDiv);
+        } else {
+            yourNavigation.removeClass(stickyDiv);
+        }
+    });
 });
