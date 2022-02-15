@@ -1439,4 +1439,10 @@ section{
     margin-top: 10px;
 }
 
+.master.one-page section#services,
+.master.one-page section#services .main-content{
+    height: auto;
+}
+
+
 
